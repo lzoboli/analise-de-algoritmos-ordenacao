@@ -1,6 +1,6 @@
 package ordenacao;
 
-public class OrdenacaoMergeSort<T extends Comparable<T>> extends OrdenacaoAbstract<T> {
+public class OrdenacaoMergeSort extends OrdenacaoAbstract{
 
     @Override
     public void ordenar() {
@@ -21,8 +21,8 @@ public class OrdenacaoMergeSort<T extends Comparable<T>> extends OrdenacaoAbstra
         int tamEsquerda = meio - inicio + 1;
         int tamDireita = fim - meio;
 
-        T[] esquerda = (T[]) new Comparable[tamEsquerda];
-        T[] direita = (T[]) new Comparable[tamDireita];
+        int[] esquerda =  new int[tamEsquerda];
+        int[] direita = new int[tamDireita];
 
         for (int i = 0; i <= tamEsquerda - 1; i++) {
             esquerda[i] = getInfo()[inicio + i];
@@ -38,7 +38,7 @@ public class OrdenacaoMergeSort<T extends Comparable<T>> extends OrdenacaoAbstra
 
         for (i = inicio; i <= fim; i++) {
             if ((cEsq < tamEsquerda) && (cDir < tamDireita)) {
-                if (esquerda[cEsq].compareTo(direita[cDir]) < 0) {
+                if (esquerda[cEsq] < direita[cDir]) {
                     getInfo()[i] = esquerda[cEsq];
                     cEsq += 1;
                 } else {

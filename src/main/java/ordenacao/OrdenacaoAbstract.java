@@ -1,21 +1,21 @@
 package ordenacao;
 
-public abstract class OrdenacaoAbstract<T extends Comparable<T>> {
-    private T[] info;
+public abstract class OrdenacaoAbstract {
+    private int[] info;
 
     public abstract void ordenar();
 
-    public void trocar(T[] infoParam, int pos1, int pos2) {
-        T aux = infoParam[pos1];
+    public void trocar(int[] infoParam, int pos1, int pos2) {
+        int aux = infoParam[pos1];
         infoParam[pos1] = infoParam[pos2];
         infoParam[pos2] = aux;
     }
 
-    public T[] getInfo() {
+    public int[] getInfo() {
         return info;
     }
 
-    public void setInfo(T[] info) {
+    public void setInfo(int[] info) {
         this.info = info;
     }
 }

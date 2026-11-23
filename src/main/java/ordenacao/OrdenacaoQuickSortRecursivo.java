@@ -1,6 +1,7 @@
 package ordenacao;
 
-public class OrdenacaoQuickSortRecursivo<T extends Comparable<T>> extends OrdenacaoAbstract<T>{
+public class OrdenacaoQuickSortRecursivo extends OrdenacaoAbstract {
+
     @Override
     public void ordenar() {
         int n = getInfo().length - 1;
@@ -18,16 +19,16 @@ public class OrdenacaoQuickSortRecursivo<T extends Comparable<T>> extends Ordena
     private int particionar(int inicio, int fim) {
         int a = inicio;
         int b = fim + 1;
-        T pivo = getInfo()[inicio];
+        int pivo = getInfo()[inicio];
 
         while (true) {
             do {
                 a += 1;
-            } while (a <= fim && getInfo()[a].compareTo(pivo) < 0);
+            } while ((a <= fim) && (getInfo()[a] < pivo));
 
             do {
                 b -= 1;
-            } while (b >= inicio && (getInfo()[b].compareTo(pivo)) > 0);
+            } while ((b >= inicio) && (getInfo()[b] > pivo));
 
             if (a >= b) break;
             trocar(getInfo(), a, b);
