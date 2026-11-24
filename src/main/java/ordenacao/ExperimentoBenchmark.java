@@ -18,13 +18,11 @@ public class ExperimentoBenchmark {
     private static final double ERRO_MAX = 0.05;  // Erro relativo máximo de 5%
 
     public static void main(String[] args) {
-        // Garante que a pasta resultados/ exista na raiz do projeto
         File diretorioResultados = new File("resultados");
         if (!diretorioResultados.exists()) {
             diretorioResultados.mkdirs();
         }
 
-        // Definição dos tamanhos de entrada para testar escalabilidade
         int[] tamanhos = {10_000, 50_000, 100_000};
 
         OrdenacaoAbstract[] algoritmos = {

@@ -8,6 +8,7 @@ public class OrdenacaoQuickSortIterativo extends OrdenacaoAbstract{
             return;
         }
         quickSortIterativo(0, getInfo().length - 1);
+
     }
 
     private void quickSortIterativo(int inicio, int fim) {
@@ -39,6 +40,10 @@ public class OrdenacaoQuickSortIterativo extends OrdenacaoAbstract{
     }
 
     private int particionar(int inicio, int fim) {
+
+        int meio = inicio + (fim - inicio) / 2;
+        trocar(getInfo(), inicio, meio);
+
         int a = inicio;
         int b = fim + 1;
         int pivo = getInfo()[inicio];
