@@ -1,6 +1,6 @@
 # Análise Experimental de Algoritmos de Ordenação
 
-Implementação e análise comparativa de desempenho entre os algoritmos **Quick Sort Recursivo**, **Quick Sort Iterativo** e **Merge Sort**, desenvolvida para a disciplina de **Análise de Algoritmos** (Ciência da Computação — FURB).
+Implementação e análise comparativa de desempenho entre os algoritmos **Quick Sort Recursivo**, **Quick Sort Iterativo** e **Merge Sort**, desenvolvida para a disciplina de **Análise de Algoritmos** (Ciência da Computação - FURB).
 
 ## 📋 Sobre o Projeto
 
